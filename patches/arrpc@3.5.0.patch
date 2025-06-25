@@ -1,14 +1,24 @@
 diff --git a/src/process/index.js b/src/process/index.js
-index 389b0845256a34b4536d6da99edb00d17f13a6b4..f17a0ac687e9110ebfd33cb91fd2f6250d318643 100644
+index f445024f14ecfe5ee0eb70fe42535591c76838dc..745011ab42ae61df7ebca228e0f8e70e731944ab 100644
 --- a/src/process/index.js
 +++ b/src/process/index.js
-@@ -5,8 +5,20 @@ import fs from 'node:fs';
+@@ -5,8 +5,30 @@ import fs from 'node:fs';
  import { dirname, join } from 'path';
  import { fileURLToPath } from 'url';
  
 -const __dirname = dirname(fileURLToPath(import.meta.url));
 -const DetectableDB = JSON.parse(fs.readFileSync(join(__dirname, 'detectable.json'), 'utf8'));
 +const DetectableDB = require('./detectable.json');
++const dotaGame = DetectableDB.find(game => game.name === "Dota 2");
++if (dotaGame) {
++  const newExecutable = {
++    "is_launcher": false,
++    "name": "dota2",
++    "os": "linux"
++  };
++  dotaGame.executables.push(newExecutable);
++};
++
 +DetectableDB.push(
 +  {
 +    aliases: ["Obs"],
