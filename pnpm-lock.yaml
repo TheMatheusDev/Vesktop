@@ -9,7 +9,7 @@ patchedDependencies:
     hash: ecd3bbaf83925e349d39e3de1c3fbde682e28fd8433d8c9af96687faf9655c16
     path: patches/arrpc@3.5.0.patch
   electron-updater:
-    hash: 06562dca45cc1e944051c5244369c00c2cd1e12f262d36c2555b37a464e02b7d
+    hash: 080505564abb2ebbda932bbf8fe91540c74dd905de994888d52ffce6f882f887
     path: patches/electron-updater.patch
 
 importers:
@@ -21,7 +21,7 @@ importers:
         version: https://codeload.github.com/OpenAsar/arrpc/tar.gz/2234e9c9111f4c42ebcc3aa6a2215bfd979eef77(patch_hash=ecd3bbaf83925e349d39e3de1c3fbde682e28fd8433d8c9af96687faf9655c16)
       electron-updater:
         specifier: ^6.6.2
-        version: 6.6.2(patch_hash=06562dca45cc1e944051c5244369c00c2cd1e12f262d36c2555b37a464e02b7d)
+        version: 6.6.2(patch_hash=080505564abb2ebbda932bbf8fe91540c74dd905de994888d52ffce6f882f887)
       venbind:
         specifier: 0.1.7
         version: 0.1.7
@@ -4235,7 +4235,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  electron-updater@6.6.2(patch_hash=06562dca45cc1e944051c5244369c00c2cd1e12f262d36c2555b37a464e02b7d):
+  electron-updater@6.6.2(patch_hash=080505564abb2ebbda932bbf8fe91540c74dd905de994888d52ffce6f882f887):
     dependencies:
       builder-util-runtime: 9.3.1
       fs-extra: 10.1.0
